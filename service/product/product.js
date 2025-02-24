@@ -1,15 +1,19 @@
-const createProduct =async(productObj)=>{
- const newProduct = await product.create(productObj)
- 
+const mongoose = require("mongoose");
+const product = require("../../model/product/product");
 
- return newProduct;
+const createProduct =async(productObj)=>{
+ const newProduct = await product.create(productObj);
+ 
+return newProduct;
 }
 
 
-const fetchAllProduct =async(params)=>{
+const fetchAllProducts =async(params)=>{
+    const products = await product.find();
+    return products;
 
 }
 const fetchProductById =async(productId)=>{
 
 }
-module.exports = {createProduct, fetchAllProduct, fetchProductById}
+module.exports = {createProduct, fetchAllProducts,}

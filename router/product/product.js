@@ -4,8 +4,8 @@ const {createProductController,fetchAllProductController} = require("../../contr
 
 const router =express.Router();
 
-router.post('/product', createProductController)
+router.post("/product", createProductController)
 router.get("/products", fetchAllProductController)
 
 
-module.exports =router;
+module.exports = router;
